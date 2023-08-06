@@ -59,7 +59,9 @@ class Main extends Sprite
         Sys.println(errMsg);
 
         Application.current.window.alert(errMsg, "um");
+        #if desktop
         DiscordClient.shutdown();
+        #end
         Sys.exit(1);
     }
 
